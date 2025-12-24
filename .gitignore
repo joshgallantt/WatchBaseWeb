@@ -1,0 +1,5 @@
+# Original large image files (keep compressed versions only)
+images/*.PNG
+images/*.png
+!images/logo_compressed.png
+
