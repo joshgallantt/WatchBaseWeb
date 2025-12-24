@@ -16,7 +16,7 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(180deg, #171717 0%, #FF3B30 100%);
             min-height: 100vh;
         }
         
@@ -33,10 +33,14 @@
         }
         
         .logo {
-            font-size: 3rem;
-            font-weight: bold;
+            display: inline-block;
             margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .logo img {
+            height: 80px;
+            width: auto;
+            filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
         }
         
         .tagline {
@@ -144,9 +148,47 @@
             text-decoration: underline;
         }
         
+        .screenshots-section {
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .screenshots-section h2 {
+            color: white;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .screenshots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .screenshot-item {
+            background: white;
+            border-radius: 15px;
+            padding: 1rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            transition: transform 0.2s;
+        }
+        
+        .screenshot-item:hover {
+            transform: translateY(-5px);
+        }
+        
+        .screenshot-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+        }
+        
         @media (max-width: 768px) {
-            .logo {
-                font-size: 2rem;
+            .logo img {
+                height: 60px;
             }
             
             .hero h1 {
@@ -156,13 +198,20 @@
             .features {
                 grid-template-columns: 1fr;
             }
+            
+            .screenshots-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 1rem;
+            }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">🎬 WatchBase</div>
+            <div class="logo">
+                <img src="images/logo.png" alt="WatchBase Logo">
+            </div>
             <div class="tagline">Your Personal Entertainment Discovery Platform</div>
         </div>
     </header>
@@ -202,6 +251,24 @@
                 <div class="feature-icon">🎯</div>
                 <h3>Personalized</h3>
                 <p>Get recommendations based on your viewing history and preferences</p>
+            </div>
+        </div>
+        
+        <div class="screenshots-section">
+            <h2>See WatchBase in Action</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot-item">
+                    <img src="images/WatchBase1.PNG" alt="WatchBase Screenshot 1">
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/WatchBase2.PNG" alt="WatchBase Screenshot 2">
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/WatchBase3.PNG" alt="WatchBase Screenshot 3">
+                </div>
+                <div class="screenshot-item">
+                    <img src="images/WatchBase4.PNG" alt="WatchBase Screenshot 4">
+                </div>
             </div>
         </div>
     </div>
