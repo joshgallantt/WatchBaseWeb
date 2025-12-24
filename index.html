@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WatchBase - Discover Your Next Favorite Movie or TV Show</title>
+    <meta name="description" content="WatchBase helps you discover, track, and organize your favorite movies and TV shows. Find personalized recommendations and build your watchlist.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            padding: 2rem 0;
+            text-align: center;
+            color: white;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .tagline {
+            font-size: 1.25rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+        }
+        
+        .hero {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            margin: 2rem auto;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #333;
+        }
+        
+        .feature p {
+            color: #666;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .app-store-button {
+            display: inline-block;
+            background: #000;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin: 0.5rem;
+        }
+        
+        .app-store-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+        }
+        
+        .app-store-button:active {
+            transform: translateY(0);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: white;
+        }
+        
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            opacity: 0.9;
+        }
+        
+        footer a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">🎬 WatchBase</div>
+            <div class="tagline">Your Personal Entertainment Discovery Platform</div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="hero">
+            <h1>Discover Your Next Favorite Show</h1>
+            <p>WatchBase helps you discover, track, and organize your favorite movies and TV shows. Get personalized recommendations based on your preferences and build the perfect watchlist.</p>
+            
+            <div class="cta-section">
+                <a href="https://apps.apple.com/app/watchbase" class="app-store-button" target="_blank" rel="noopener noreferrer">
+                    📱 Download on the App Store
+                </a>
+            </div>
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <div class="feature-icon">🔍</div>
+                <h3>Discover</h3>
+                <p>Find new movies and TV shows tailored to your taste with personalized recommendations</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">⭐</div>
+                <h3>Favorites</h3>
+                <p>Save your favorite titles and keep them organized in one place</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">📋</div>
+                <h3>Watchlist</h3>
+                <p>Build and manage your watchlist to never miss what you want to see</p>
+            </div>
+            
+            <div class="feature">
+                <div class="feature-icon">🎯</div>
+                <h3>Personalized</h3>
+                <p>Get recommendations based on your viewing history and preferences</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            <a href="https://github.com/joshgallantt/WatchBase" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </div>
+    </footer>
+</body>
+</html>
+
