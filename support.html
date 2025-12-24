@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - WatchBase</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="preload" as="image" href="images/logo_compressed.png">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #ffffff;
+            background: #171717;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+        
+        /* Header */
+        header {
+            padding: 40px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            text-decoration: none;
+        }
+        
+        .logo-section img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+        
+        .back-link {
+            color: #FF3B30;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: opacity 0.2s;
+        }
+        
+        .back-link:hover {
+            opacity: 0.8;
+        }
+        
+        /* Content */
+        .content {
+            padding: 80px 0;
+        }
+        
+        .page-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 16px;
+            letter-spacing: -2px;
+            background: linear-gradient(135deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .page-subtitle {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.25rem;
+            margin-bottom: 48px;
+        }
+        
+        .content-section {
+            margin-bottom: 48px;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #FF3B30;
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+        }
+        
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 12px;
+            margin-top: 24px;
+        }
+        
+        p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+        
+        ul {
+            margin: 16px 0 16px 24px;
+        }
+        
+        li {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        
+        strong {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 600;
+        }
+        
+        a {
+            color: #FF3B30;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+        
+        a:hover {
+            opacity: 0.8;
+            text-decoration: underline;
+        }
+        
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .faq-item h3 {
+            margin-top: 0;
+            color: #ffffff;
+        }
+        
+        .contact-box {
+            background: rgba(255, 59, 48, 0.1);
+            border-left: 3px solid #FF3B30;
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 8px;
+        }
+        
+        .contact-box p {
+            margin-bottom: 0;
+        }
+        
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+            margin-top: 32px;
+        }
+        
+        .contact-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-4px);
+            border-color: #FF3B30;
+        }
+        
+        .contact-card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .contact-card h3 {
+            margin: 0 0 8px 0;
+            font-size: 1.25rem;
+        }
+        
+        .contact-card p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .contact-card a {
+            display: inline-block;
+            margin-top: 12px;
+            color: #FF3B30;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            text-align: center;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        
+        .footer-links a:hover {
+            color: #FF3B30;
+        }
+        
+        .copyright {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 24px;
+            }
+            
+            header {
+                padding: 24px 0;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+            
+            .logo-section {
+                flex-direction: column;
+                gap: 8px;
+            }
+            
+            .logo-section img {
+                height: 40px;
+            }
+            
+            .brand-name {
+                font-size: 1.25rem;
+            }
+            
+            .content {
+                padding: 40px 0;
+            }
+            
+            .page-title {
+                font-size: 2.5rem;
+                letter-spacing: -1px;
+            }
+            
+            .page-subtitle {
+                font-size: 1.1rem;
+                margin-bottom: 32px;
+            }
+            
+            .content-section {
+                margin-bottom: 40px;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.1rem;
+            }
+            
+            p, li {
+                font-size: 1rem;
+            }
+            
+            .contact-methods {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo-section">
+                    <img src="images/logo_compressed.png" alt="WatchBase Logo">
+                    <span class="brand-name">WatchBase</span>
+                </a>
+                <a href="index.html" class="back-link">← Back to Home</a>
+            </div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="content">
+                <h1 class="page-title">Support</h1>
+                <p class="page-subtitle">We're here to help you get the most out of WatchBase</p>
+                
+                <div class="content-section">
+                    <h2>Frequently Asked Questions</h2>
+                    
+                    <div class="faq-item">
+                        <h3>How do I add movies or TV shows to my watchlist?</h3>
+                        <p>Browse or search for any movie or TV show, then tap on it to view details. On the details page, tap the bookmark icon to add it to your watchlist.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How do I mark something as watched?</h3>
+                        <p>Open the details page for any movie or TV show and tap the checkmark icon. This will mark it as watched and remove it from your watchlist automatically.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How does the For You feed work?</h3>
+                        <p>The For You feed provides personalized recommendations based on your favorites. Add movies and TV shows to your favorites, and WatchBase will suggest similar content you might enjoy.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Can I hide watched items from my recommendations?</h3>
+                        <p>Yes! Go to Settings and enable "Hide Watched in For You Feed" to filter out content you've already seen from your recommendations.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Is my data synced across devices?</h3>
+                        <p>Currently, all data is stored locally on your device. Your favorites, watchlist, and viewing history are private and stay on your device only.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>What happens if I delete the app?</h3>
+                        <p>If you delete WatchBase, all your data (favorites, watchlist, watched history) will be removed from your device. We recommend exporting your data before uninstalling if you plan to reinstall later.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Where does WatchBase get its movie and TV show data?</h3>
+                        <p>WatchBase uses The Movie Database (TMDB) API to provide comprehensive information about movies and TV shows, including ratings, descriptions, cast, and images.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Does WatchBase track my viewing habits?</h3>
+                        <p>No. WatchBase is completely privacy-first. We don't collect, store, or transmit any of your personal data or viewing habits. Everything stays on your device. See our <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>Can I change the language or region?</h3>
+                        <p>Yes! Go to Settings to customize your language and region preferences. This will affect the content and recommendations you see.</p>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <h3>How do I report a bug or request a feature?</h3>
+                        <p>We'd love to hear from you! Please use one of the contact methods below to report bugs or suggest new features.</p>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <h2>Troubleshooting</h2>
+                    
+                    <h3>App is running slowly</h3>
+                    <p>Try these steps:</p>
+                    <ul>
+                        <li>Close and reopen the app</li>
+                        <li>Restart your device</li>
+                        <li>Ensure you have the latest version of WatchBase installed</li>
+                        <li>Check your internet connection (required for fetching movie/TV data)</li>
+                    </ul>
+                    
+                    <h3>Images not loading</h3>
+                    <p>If movie posters or images aren't loading:</p>
+                    <ul>
+                        <li>Check your internet connection</li>
+                        <li>Try switching between WiFi and cellular data</li>
+                        <li>Clear the app cache by closing and reopening</li>
+                    </ul>
+                    
+                    <h3>Search not working</h3>
+                    <p>If search isn't returning results:</p>
+                    <ul>
+                        <li>Verify you have an active internet connection</li>
+                        <li>Try different search terms or spellings</li>
+                        <li>Check that you're searching in the correct tab (Movies, TV Shows, or All)</li>
+                    </ul>
+                    
+                    <h3>App crashes or freezes</h3>
+                    <p>If you're experiencing crashes:</p>
+                    <ul>
+                        <li>Update to the latest version of WatchBase</li>
+                        <li>Restart your device</li>
+                        <li>Ensure your iOS is up to date</li>
+                        <li>If the problem persists, please contact support with details</li>
+                    </ul>
+                </div>
+                
+                <div class="content-section">
+                    <h2>Contact Support</h2>
+                    <div class="contact-box">
+                        <p><strong>Need more help?</strong> We're here to assist you. Choose your preferred contact method below and we'll get back to you as soon as possible.</p>
+                    </div>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-card">
+                            <div class="contact-card-icon">💬</div>
+                            <h3>GitHub Issues</h3>
+                            <p>Report bugs or request features</p>
+                            <a href="https://github.com/joshgallantt/WatchBase/issues" target="_blank" rel="noopener noreferrer">Open an Issue →</a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <div class="contact-card-icon">📧</div>
+                            <h3>Email Support</h3>
+                            <p>Get help via email</p>
+                            <a href="mailto:support@watchbase.app">support@watchbase.app</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <h2>System Requirements</h2>
+                    <ul>
+                        <li><strong>Platform:</strong> iOS 17.0 or later</li>
+                        <li><strong>Device:</strong> iPhone</li>
+                        <li><strong>Storage:</strong> Minimal (app size + local data)</li>
+                        <li><strong>Internet:</strong> Required for fetching movie/TV information</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="support.html">Support</a>
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                </div>
+                <div class="copyright">© 2025 WatchBase. All rights reserved.</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
