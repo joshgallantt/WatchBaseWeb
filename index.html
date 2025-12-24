@@ -102,28 +102,23 @@
             line-height: 1.5;
         }
         
-        .cta-button {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            background: #FF3B30;
-            color: white;
-            padding: 18px 40px;
-            border-radius: 14px;
-            text-decoration: none;
-            font-size: 1.125rem;
-            font-weight: 600;
+        .app-store-badge {
+            display: inline-block;
             transition: all 0.3s ease;
-            box-shadow: 0 8px 24px rgba(255, 59, 48, 0.3);
         }
         
-        .cta-button:hover {
+        .app-store-badge img {
+            height: 60px;
+            width: auto;
+            display: block;
+        }
+        
+        .app-store-badge:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 32px rgba(255, 59, 48, 0.4);
-            background: #ff4d42;
+            opacity: 0.9;
         }
         
-        .cta-button:active {
+        .app-store-badge:active {
             transform: translateY(0);
         }
         
@@ -298,9 +293,8 @@
                 margin-bottom: 32px;
             }
             
-            .cta-button {
-                padding: 16px 32px;
-                font-size: 1rem;
+            .app-store-badge img {
+                height: 50px;
             }
             
             .section-title {
@@ -359,9 +353,8 @@
         <div class="container">
             <h1>Your Personal Movie &<br>TV Show Companion</h1>
             <p class="subtitle">Discover, track, and organize your favorite entertainment. Get personalized recommendations tailored to your unique taste.</p>
-            <a href="https://apps.apple.com/app/watchbase" class="cta-button" target="_blank" rel="noopener noreferrer">
-                <span>📱</span>
-                <span>Download on the App Store</span>
+            <a href="https://apps.apple.com/app/watchbase" class="app-store-badge" target="_blank" rel="noopener noreferrer">
+                <img src="images/DownloadOnAppStore.svg" alt="Download on the App Store">
             </a>
         </div>
     </section>
